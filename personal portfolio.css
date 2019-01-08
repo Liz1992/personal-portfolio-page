@@ -1,0 +1,185 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+a{
+	text-decoration: none;
+	font-weight: bold;
+}
+#navbar{
+	height: 55px;
+	width: 100%;
+	background: rgb(225, 242, 234);
+	position: fixed;
+	top: 0;
+	left: 0;
+	line-height: 55px;
+	text-align: right;
+}
+#navbar > a{
+	padding-right: 120px;
+	color: rgb(78, 107, 92);
+	-webkit-animation: show_up 2.5s 1.5s forwards;
+	        animation: show_up 2.5s 1.5s forwards;
+	opacity: 0;
+}
+#navbar > a:hover{
+	color: rgb(31, 66, 49);
+}
+#welcome-section{
+	width: 100vw;
+	height: 100vh;
+	background: -webkit-linear-gradient(rgb(225, 242, 234) 80%, rgb(242, 242, 242) 100%);
+	               -moz-linear-gradient(rgb(225, 242, 234) 80%, rgb(242, 242, 242) 100%);
+	                 -o-linear-gradient(rgb(225, 242, 234) 80%, rgb(242, 242, 242) 100%);
+	                    linear-gradient(rgb(225, 242, 234) 80%, rgb(242, 242, 242) 100%);
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-family: "Gill Sans", sans-serif;
+}
+#welcome-section > h1{
+	line-height: 80px;
+	color: rgb(78, 107, 92);
+	word-spacing: 10px;
+	letter-spacing: 3px;
+	-webkit-animation: show_up 2.5s;
+	        animation: show_up 2.5s;
+}
+#welcome-section > h3{
+	color: rgb(31, 66, 49);
+	line-height: 50px;
+	-webkit-animation: show_up 4s;
+	        animation: show_up 4s;
+}
+#welcome-section > h4{
+	color: rgb(25, 53, 86);
+	line-height: 50px;
+	-webkit-animation: show_up 5s;
+	        animation: show_up 5s;
+}
+@-webkit-keyframes show_up{
+           from{opacity:0;}
+           to{opacity:1;}
+       }
+@keyframes show_up{
+    from{opacity:0;}
+    to{opacity:1;}
+}              
+#projects{
+	background: -webkit-linear-gradient(rgb(242, 242, 242) 80%, white 100%);
+	               -moz-linear-gradient(rgb(242, 242, 242) 80%, white 100%);
+	                 -o-linear-gradient(rgb(242, 242, 242) 80%, white 100%);
+	                    linear-gradient(rgb(242, 242, 242) 80%, white 100%);
+	width: 100vw;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+#projects > h1{
+	text-align: center;
+	font-family: "Gill Sans", sans-serif;
+	color: rgb(78, 107, 92);
+	line-height: 100px;
+	padding-top: 55px;
+	grid-area: 1/1/2/3;
+}
+.project-tile{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	width: 300px;
+	height: 350px;
+	margin: 40px;
+	border-radius:3px;
+	border: 3px solid rgba(31, 66, 49, .5);
+	justify-self: center;
+}
+.project-tile > p{
+	text-align: center;
+	font-weight: bold;
+	color: rgba(31, 66, 49);
+	line-height: 60px;
+	border-top: 3px solid rgba(31, 66, 49, .5);
+}
+.project-tile > img{
+	width: 300px;
+	height: 287px;
+}
+#link-section{
+	width: 100vw;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-items: center;
+}
+#link-section > h1{
+	font-family: "Gill Sans", sans-serif;
+	line-height: 100px;
+	padding-top: 55px;
+	color: rgb(78, 107, 92);
+	text-align: center;
+	grid-area: 1/1/2/4;
+}
+#profile-link{
+	display: block;
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
+	background: rgb(242, 242, 242);
+	border: 2px solid rgb(225, 242, 234);
+	color: rgb(31, 66, 49);
+	line-height: 200px;
+	text-align: center;
+	margin: 40px 50px 100px;
+}
+#profile-link:hover{
+	background: rgb(225, 242, 234);
+	font-size: 20px;
+}
+@media screen and (max-width: 800px){
+	#navbar{
+		text-align: center;
+	}
+    #navbar > a{
+	    padding: 0 30px;
+    }
+    #projects{
+	    grid-template-columns: 1fr;
+    }
+    #projects > h1{
+	    grid-area: 1/1/2/2;
+    }
+    #link-section{
+	    grid-template-columns: 1fr 1fr;
+    }
+    #link-section > h1{
+	    grid-area: 1/1/2/3;
+	    line-height: 50px;
+	    padding-top: 55px;
+    }
+    #profile-link:nth-of-type(3){
+        grid-area: 3/1/4/3;
+    }
+    #profile-link{
+    	margin: 20px 40px 50px;
+    }
+}
+@media screen and (max-width: 600px){
+	#link-section{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	#link-section > h1{
+	    grid-area: 1/1/2/3;
+	    line-height: 50px;
+	    padding-top: 55px;
+    }
+	#profile-link{
+    	margin: 15px 40px;
+    	height: 150px;
+	    width: 150px;
+	    line-height: 150px;
+    }
+}
