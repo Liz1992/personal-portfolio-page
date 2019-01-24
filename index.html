@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<title>personal portfolio</title>
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="personal portfolio.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript">
+		window.onload=function () {
+			// mixed colors from #ffffcc to #99cccc
+			const colorPool=["#ffffcc","#fafccc","#f5facc","#f0f7cc","#ebf5cc","#e6f2cc","#e0f0cc","#dbedcc","  #d6ebcc","#d1e8cc","#cce6cc","#c7e3cc","#c2e0cc","#bddecc","#b8dbcc","#b2d9cc","#add6cc","#a8d4cc","#a3d1cc","#9ecfcc","#99cccc"];
+			const reversedPool=[].concat(colorPool).reverse();
+			const newPool=colorPool.concat(reversedPool);
+			//change backgroundcolor every second
+			let i=0;
+			const max=newPool.length;
+			const changeColor=setInterval(function(){
+				document.getElementById("navbar").style.background=newPool[i];
+				document.getElementById("welcome-section").style.background=newPool[i];
+				i++;
+				if(i>max){
+					i=0;
+				}
+			},300);
+		}
+	</script>
+</head>
+<body>
+	<nav id="navbar">
+		<a href="#welcome-section">About</a>
+		<a href="#projects">Work</a>
+		<a href="#link-section">Contact</a>
+	</nav>
+	<section id="welcome-section">
+		<h1>
+			Welcome to my portfolio!
+		</h1>
+		<i class="fa fa-heart"></i>
+		<h3>
+			I'am Lizhi.
+		</h3>
+		<h4>
+			a web developer
+		</h4>
+	</section>
+	<section id="projects">
+		<h1>
+			These are some of my projects..
+		</h1>
+		<a href="https://mystifying-hoover-dace7e.netlify.com/" class="project-tile">
+			<img src="tribute page.png">
+			<p>Tribute page</p>
+		</a>
+		<a href="https://laughing-mahavira-5963a0.netlify.com/" class="project-tile">
+			<img src="survey form.png">
+			<p>survey form</p>
+		</a>
+		<a href="https://epic-nightingale-955b75.netlify.com/" class="project-tile">
+			<img src="product landing page.png">
+			<p>product landing page</p>
+		</a>
+		<a href="https://gracious-hamilton-6b1a83.netlify.com/" class="project-tile">
+			<img src="technical documentation page.png">
+			<p>technical documentation page</p>
+		</a>
+	</section>
+	<section id="link-section">
+		<h1>
+			Let's work together...
+		</h1>
+		<a id="profile-link" target="_blank" href="https://github.com/Liz1992">Github</a>
+		<a id="profile-link" target="_blank" href="mailto:he1y@uwindsor.ca">send a mail</a>
+		<a id="profile-link" target="_blank" href="https://www.freecodecamp.org/lizhi">FreeCodeCamp</a>
+	</section>
+</body>
+</html>
