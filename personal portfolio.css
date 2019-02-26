@@ -195,9 +195,9 @@ a{
     	        height: 150px;
 	        width: 150px;
 	        line-height: 150px;
-		font-size: 15px;
+		font-size: 10px;
         }
 	#profile-link:hover{
-	        font-size: 20px;
+	        font-size: 15px;
         }
 }
